@@ -20,14 +20,19 @@ class Car {
 
 }
 
+let car;
+beforeEach(() =>{
+    car = new Car();
+    console.log('First instance is about park function');
+    console.log('Second instance is about drive function');
+
+});
 describe('Car',() => {
     it('has a park function', () => {
-        const car = new Car();
         assert.equal(car.park(), 'stopped');
 
     })
     it('has a drive function',() =>{
-        const car = new Car();
         assert.equal(car.drive(), 'vroom');
     })
 
